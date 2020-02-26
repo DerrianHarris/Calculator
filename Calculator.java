@@ -16,7 +16,8 @@ public class Calculator extends JFrame
   
   Calculator() // the frame constructor method
   {
-    super("My Simple Frame"); setBounds(100,100,210,200);
+    super("Calculator"); setBounds(100,100,210,200);
+    setResizable(false);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     Container con = this.getContentPane(); // inherit main frame
     
@@ -162,7 +163,8 @@ public class Calculator extends JFrame
 					  	String[] Output = InfixToPostfix(ParseInput(Input));
 					    ExpressionTree et = new ExpressionTree();
 					    Node node = et.constructTree(Output);
-					    tf.setText(""+SolveTree(node));
+					    Input = ""+SolveTree(node);
+					    tf.setText(Input);
 					  break;
 				  default:
 				    Input += text;
