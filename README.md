@@ -1,2 +1,2 @@
 # Calculator
-Calculator created in java
+Simple calculator created in java
